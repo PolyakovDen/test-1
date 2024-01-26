@@ -30,6 +30,7 @@ const config = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
   },
+  static: path.resolve(__dirname, "./dist"),
   plugins: [
     new CopyWebpackPlugin({
       patterns: [{ from: "public" }],
