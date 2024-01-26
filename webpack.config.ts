@@ -4,8 +4,10 @@ import CopyWebpackPlugin from "copy-webpack-plugin";
 
 const config = {
   mode:
-    (process.env.NODE_ENV as "production" | "development" | undefined) ??
-    "development",
+    (process.env.NODE_ENV as "production" | "development" | undefined) ===
+    "development"
+      ? "development"
+      : "production",
   entry: "./src/entrypoint.tsx",
   module: {
     rules: [
